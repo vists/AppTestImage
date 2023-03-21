@@ -1,0 +1,7 @@
+<resources>
+    <string name="enter_key_search">Enter search key</string>
+    <string name="question_see_detail_dialog">Do you want to see more detail for image with id %d?</string>
+    <string name="app_name">AppTestImage</string>
+    <string name="search_image">Search images</string>
+    <string name="detail_image_info">Detail image info</string>
+</resources>

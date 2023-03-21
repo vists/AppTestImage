@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchImageListFragment">
+
+    <fragment
+        android:id="@+id/searchImageListFragment"
+        android:name="app.test.payback.group.android.presentation.fragment.SearchImageListFragment"
+        android:label="@string/search_image"
+        tools:layout="@layout/fragment_search_image_list">
+        <action
+            android:id="@+id/action_searchImageListFragment_to_detailImageInfoFragment"
+            app:destination="@id/detailImageInfoFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/detailImageInfoFragment"
+            app:popUpToInclusive="false"
+            app:popUpToSaveState="true"
+            app:restoreState="true">
+            <argument
+                android:name="idImg"
+                android:defaultValue="0L"
+                app:argType="long" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailImageInfoFragment"
+        android:name="app.test.payback.group.android.presentation.fragment.DetailImageInfoFragment"
+        android:label="@string/detail_image_info"
+        tools:layout="@layout/fragment_detail_image_info">
+        <argument
+            android:name="idImg"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+</navigation>
